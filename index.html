@@ -1,0 +1,203 @@
+import React, { useState } from 'react';
+import { RoutePath } from '../types';
+import { Zap, ShieldCheck, MapPin, Mail, Phone, ArrowUpRight, Lock } from 'lucide-react';
+
+interface FooterProps {
+  onNavigate: (path: RoutePath) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
+
+  const handleNav = (path: RoutePath) => {
+    onNavigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="relative border-t border-white/10 border-t-2 border-t-[#38BDF8] bg-[#0E131F] text-white/70">
+      
+      {/* Primary Statement Bar */}
+      <div className="border-b border-white/10 bg-[#0B0F17] px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl text-center">
+          <div className="flex items-center justify-center space-x-3 mb-2">
+            <span className="h-[2px] w-8 edge-tri-color"></span>
+            <p className="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-[#FF6321]">
+              THE FIELDTECH PROPOSITION • <span className="text-[#38BDF8]">IRELAND</span>
+            </p>
+            <span className="h-[2px] w-8 edge-tri-color"></span>
+          </div>
+          <p className="mt-2 text-lg font-black uppercase tracking-tight text-white sm:text-2xl lg:text-3xl max-w-5xl mx-auto leading-tight">
+            YOU HAVE THE PRODUCT. WE BUILD THE SALES CHANNEL. WE FIND THE CUSTOMERS. WE SUPPORT THE CUSTOMER. WE HELP YOU GROW.
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
+          
+          {/* Brand Col */}
+          <div className="space-y-4 lg:col-span-2">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-[#FF6321] rotate-45 flex-shrink-0 flex items-center justify-center shadow-lg shadow-[#FF6321]/30">
+                <div className="-rotate-45 text-white font-black text-xs">F</div>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span className="font-black tracking-tighter text-white text-2xl uppercase">FIELDTECH</span>
+                <span className="text-[#FF6321] text-2xl font-black">.</span>
+                <span className="ml-2 border border-[#FF6321]/40 bg-[#FF6321]/10 px-2 py-0.5 text-[9px] font-bold text-[#FF6321] uppercase tracking-widest">LIMITED</span>
+              </div>
+            </div>
+
+            <p className="text-xs leading-relaxed text-white/70">
+              FieldTech Limited is an Irish sales, customer acquisition and commercial growth company. We build and operate high-performance sales channels across Ireland.
+            </p>
+
+            <div className="flex items-center space-x-2 text-[11px] font-bold text-[#FF6321]">
+              <MapPin className="h-4 w-4 text-[#FF6321]" />
+              <span>Headquartered in Ireland • Serving Leinster, Munster, Connacht & Ulster</span>
+            </div>
+
+            <div className="pt-2">
+              <span className="inline-flex items-center border border-[#FF6321]/40 bg-[#FF6321]/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-[#FF6321]">
+                TAGLINE: YOUR PARTNER IN GROWTH
+              </span>
+            </div>
+          </div>
+
+          {/* Solutions & Industries */}
+          <div>
+            <h3 className="text-[11px] font-black uppercase tracking-widest text-white">Industries</h3>
+            <ul className="mt-4 space-y-2.5 text-xs font-bold text-white/60 uppercase tracking-wider">
+              <li>
+                <button onClick={() => handleNav('/industries/energy')} className="hover:text-[#FF6321] transition-colors">
+                  01 — Energy Supply
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('/industries/merchant-services')} className="hover:text-[#FF6321] transition-colors">
+                  02 — Merchant Services
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('/industries/telecommunications')} className="hover:text-[#FF6321] transition-colors">
+                  03 — Telecommunications
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('/industries/business-finance')} className="hover:text-[#FF6321] transition-colors">
+                  04 — Business Finance
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div>
+            <h3 className="text-[11px] font-black uppercase tracking-widest text-white">Navigation</h3>
+            <ul className="mt-4 space-y-2.5 text-xs font-bold text-white/60 uppercase tracking-wider">
+              <li>
+                <button onClick={() => handleNav('/partner-with-us')} className="text-[#FF6321] font-black hover:underline flex items-center space-x-1">
+                  <span>Partner With Us</span>
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('/about')} className="hover:text-[#FF6321] transition-colors">
+                  About FieldTech
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('/careers')} className="hover:text-[#FF6321] transition-colors">
+                  Careers & Hiring
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('/insights')} className="hover:text-[#FF6321] transition-colors">
+                  Insights & Strategy
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact & Partner Desk */}
+          <div>
+            <h3 className="text-[11px] font-black uppercase tracking-widest text-white">Partnership Desk</h3>
+            <div className="mt-4 space-y-3 text-xs">
+              <div className="border border-white/10 border-l-2 border-l-[#38BDF8] bg-zinc-900/80 p-3.5 space-y-2">
+                <div>
+                  <div className="text-[9px] font-mono uppercase tracking-widest text-white/40">NEW PARTNER ENQUIRIES</div>
+                  <a href="mailto:info@fieldtechlimited.ie" className="mt-0.5 font-black text-white hover:text-[#38BDF8] transition-colors block">
+                    info@fieldtechlimited.ie
+                  </a>
+                </div>
+                <div className="pt-1 border-t border-white/10">
+                  <div className="text-[9px] font-mono uppercase tracking-widest text-white/40">PHONE CONTACT</div>
+                  <a href="tel:0539005020" className="mt-0.5 font-black text-white hover:text-[#FF6321] transition-colors block">
+                    053 900 50 20
+                  </a>
+                </div>
+                <div className="text-[10px] text-[#38BDF8] font-bold">Direct response within 24 business hours</div>
+              </div>
+
+              <button
+                onClick={() => handleNav('/partner-with-us')}
+                className="w-full bg-[#FF6321] py-3 text-[11px] font-black uppercase tracking-widest text-white hover:bg-[#ff7335] transition-colors"
+              >
+                START A CAMPAIGN
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-12 flex flex-col items-center justify-between border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-[11px] font-mono text-white/40">
+            © {new Date().getFullYear()} FIELDTECH LIMITED (Reg Ireland, Founded July 2024). All rights reserved.
+          </p>
+          <div className="mt-4 flex items-center space-x-6 text-[10px] font-mono uppercase tracking-widest text-white/50 sm:mt-0">
+            <button onClick={() => setPrivacyModalOpen(true)} className="hover:text-white transition-colors">
+              Privacy Policy
+            </button>
+            <button onClick={() => setPrivacyModalOpen(true)} className="hover:text-white transition-colors">
+              Cookie Preferences
+            </button>
+            <button onClick={() => setPrivacyModalOpen(true)} className="hover:text-white transition-colors">
+              Terms of Engagement
+            </button>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="font-bold text-[#FF6321] hover:text-white"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Privacy Modal */}
+      {privacyModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-md">
+          <div className="max-w-md border border-white/10 bg-[#0A0A0B] p-6 text-white/80">
+            <div className="flex items-center space-x-2 text-[#FF6321]">
+              <ShieldCheck className="h-5 w-5" />
+              <h4 className="font-black text-white uppercase text-sm">FieldTech Limited Compliance</h4>
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-white/70">
+              FieldTech Limited adheres strictly to Irish Data Protection Legislation and GDPR. Information submitted through partner enquiry forms is encrypted and used exclusively for evaluating commercial sales channel partnerships.
+            </p>
+            <button
+              onClick={() => setPrivacyModalOpen(false)}
+              className="mt-5 w-full bg-white/10 py-2.5 text-xs font-black uppercase tracking-widest text-white hover:bg-white/20"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </footer>
+  );
+};
