@@ -83,6 +83,7 @@ nav{height:74px;position:fixed;inset:0 0 auto;z-index:100;background:rgba(7,24,3
 .platform:after{content:"";position:absolute;left:7%;right:7%;bottom:9px;height:3px;background:var(--orange);border-radius:50%;box-shadow:0 0 10px rgba(255,112,8,.4)}
 .carousel{position:absolute;left:50%;top:54px;width:115px;height:70px;transform-style:preserve-3d;cursor:grab}
 .logoCard{position:absolute;width:105px;height:65px;margin:-32px -52px;background:white;border-radius:6px;border:1px solid #d5d9db;box-shadow:0 8px 13px rgba(0,0,0,.17);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:800;color:#1c2a32;padding:8px;backface-visibility:hidden}
+ .logoCard img{max-width:88%;max-height:78%;width:auto;height:auto;object-fit:contain;display:block}
 .arrow{position:absolute;top:65px;width:34px;height:34px;border-radius:50%;border:0;background:#ddd;color:#445057;font-size:20px;z-index:8} .prev{left:1%} .next{right:1%}
 .drag{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);font-size:8px;color:#777;white-space:nowrap}
 
@@ -268,7 +269,19 @@ footer{background:#091c26;padding:35px 0;color:#aebbc0;font-size:11px}
    <div class="platform"></div>
    <button class="arrow prev" id="prev">‹</button>
    <div class="carousel" id="carousel">
-    <div class="logoCard">SSE<br>Airtricity</div><div class="logoCard">Pinergy</div><div class="logoCard">FLO<br>GAS</div><div class="logoCard">Bord Gáis<br>Energy</div><div class="logoCard">Bank of<br>Ireland</div><div class="logoCard">AIB Bank</div><div class="logoCard">US Bank<br>Elavon</div><div class="logoCard">Pure<br>Telecom</div><div class="logoCard">365 Finance</div><div class="logoCard">Flourish</div><div class="logoCard">Grid Finance</div><div class="logoCard">YouLend</div><div class="logoCard">LinkedFinance</div>
+   <div class="logoCard"><img src="images/partners/SSE-Airtricity-logo.jpg" alt="SSE Airtricity"></div>
+    <div class="logoCard"><img src="images/partners/Pinergy Logo.jpg" alt="Pinergy"></div>
+    <div class="logoCard"><img src="images/partners/FloGas.png" alt="Flogas"></div>
+    <div class="logoCard"><img src="images/partners/BGE.png" alt="Bord Gáis Energy"></div>
+    <div class="logoCard"><img src="images/partners/Bank of Ireland Logo.jpg" alt="Bank of Ireland"></div>
+    <div class="logoCard"><img src="images/partners/AIB.jpg" alt="AIB Bank"></div>
+    <div class="logoCard"><img src="images/partners/Elavon.png" alt="Elavon"></div>
+    <div class="logoCard"><img src="images/partners/Pure.jpg" alt="Pure Telecom"></div>
+    <div class="logoCard"><img src="images/partners/365.png" alt="365 Finance"></div>
+    <div class="logoCard">Flourish</div>
+    <div class="logoCard"><img src="images/partners/Grid.png" alt="Grid Finance"></div>
+    <div class="logoCard"><img src="images/partners/youlend.jpg" alt="YouLend"></div>
+    <div class="logoCard">LinkedFinance</div>
    </div>
    <button class="arrow next" id="next">›</button>
    <div class="drag">☝ DRAG TO ROTATE</div>
