@@ -163,14 +163,15 @@ footer{background:#091c26;padding:35px 0;color:#aebbc0;font-size:11px}
  .serviceGrid{grid-template-columns:1fr} .stats{grid-template-columns:1fr} .promoGrid{grid-template-columns:1fr} .fields{grid-template-columns:1fr} .field.full{grid-column:auto}
 }
 
-/* FLASHY PROMOTIONAL PILLARS — RED / BABY BLUE / WHITE */
+/* FLASHY PROMOTIONAL PILLARS — GREEN / BABY BLUE / WHITE */
 .promoGrid{gap:18px}
 .promo{transition:.28s transform,.28s box-shadow,.28s border-color}
 .promo:hover{transform:translateY(-8px) scale(1.015)}
 .promo:nth-child(1){
-  background:linear-gradient(145deg,#b30f1a 0%,#ef3340 54%,#ff6670 100%);
-  border-color:rgba(255,255,255,.45);
-  box-shadow:0 20px 50px rgba(239,51,64,.30);
+  background:linear-gradient(145deg,#ffffff 0%,#f4fff6 55%,#ddf5e3 100%);
+  border-color:#48aa68;
+  box-shadow:0 20px 50px rgba(40,150,80,.22);
+  color:#14652f;
 }
 .promo:nth-child(2){
   background:linear-gradient(145deg,#7fd4ff 0%,#bdeaff 48%,#eefaff 100%);
@@ -184,24 +185,24 @@ footer{background:#091c26;padding:35px 0;color:#aebbc0;font-size:11px}
   box-shadow:0 20px 50px rgba(255,255,255,.18);
   color:#10232f;
 }
-.promo:nth-child(1):before{background:rgba(255,255,255,.14)}
+.promo:nth-child(1):before{background:rgba(46,169,82,.23)}
 .promo:nth-child(2):before{background:rgba(255,255,255,.40)}
 .promo:nth-child(3):before{background:rgba(127,212,255,.20)}
-.promo:nth-child(1) .tag{color:#fff1f2}
+.promo:nth-child(1) .tag{color:#176d34}
 .promo:nth-child(2) .tag{color:#0d5f85}
 .promo:nth-child(3) .tag{color:#ef3340}
-.promo:nth-child(1) .offer b{color:#fff}
+.promo:nth-child(1) .offer b{color:#14762f}
 .promo:nth-child(2) .offer b{color:#0b78a9}
 .promo:nth-child(3) .offer b{color:#ef3340}
-.promo:nth-child(1) p{color:#fff0f2}
+.promo:nth-child(1) p{color:#21683c}
 .promo:nth-child(2) p,.promo:nth-child(3) p{color:#40545d}
-.promo:nth-child(1) a{color:white}
+.promo:nth-child(1) a{color:#136a30}
 .promo:nth-child(2) a{color:#0b78a9}
 .promo:nth-child(3) a{color:#ef3340}
-.promo:nth-child(1){animation:promoPulseRed 2.6s ease-in-out infinite}
+.promo:nth-child(1){animation:promoPulseGreen 2.6s ease-in-out infinite}
 .promo:nth-child(2){animation:promoPulseBlue 2.8s ease-in-out infinite .3s}
 .promo:nth-child(3){animation:promoPulseWhite 3s ease-in-out infinite .6s}
-@keyframes promoPulseRed{50%{box-shadow:0 0 0 3px rgba(255,255,255,.18),0 26px 60px rgba(239,51,64,.42)}}
+@keyframes promoPulseGreen{50%{box-shadow:0 0 0 3px rgba(92,190,113,.22),0 26px 60px rgba(46,169,82,.28)}}
 @keyframes promoPulseBlue{50%{box-shadow:0 0 0 3px rgba(255,255,255,.55),0 26px 60px rgba(127,212,255,.42)}}
 @keyframes promoPulseWhite{50%{box-shadow:0 0 0 3px rgba(127,212,255,.28),0 26px 60px rgba(255,255,255,.28)}}
 
@@ -295,7 +296,7 @@ footer{background:#091c26;padding:35px 0;color:#aebbc0;font-size:11px}
   <h2>FEATURED OFFERS.</h2>
   <p class="sub">Three high-impact promotional pillars designed to stop the scroll and showcase your strongest partner campaigns.</p>
   <div class="promoGrid">
-   <article class="promo"><span class="tag">ENERGY SUPPLY</span><h3>SSE AIRTRICITY</h3><div class="offer">FIXED RATE<br><b>€0.3132</b></div><p>Premium promotional space for your current SSE Airtricity campaign.</p><a href="#contact">CHECK YOUR RATE →</a></article>
+   <article class="promo"><span class="tag">ENERGY SUPPLY</span><h3>SSE AIRTRICITY</h3><div class="offer">THE MOST<br><b>COMPETITIVE<br>FIXED RATES</b></div><p>Premium promotional space for your current SSE Airtricity campaign.</p><a href="#contact">CHECK YOUR RATE →</a></article>
    <article class="promo"><span class="tag">MERCHANT SERVICES</span><h3>PAYMENTS</h3><div class="offer">SMARTER<br><b>PAYMENTS.</b></div><p>Use this pillar for Bank of Ireland, AIB or Elavon terminal and payment promotions.</p><a href="#contact">COMPARE OPTIONS →</a></article>
    <article class="promo"><span class="tag">BUSINESS FINANCE</span><h3>FUND YOUR GROWTH</h3><div class="offer">CAPITAL<br><b>WHEN YOU NEED IT.</b></div><p>Use this pillar for your strongest current business finance campaign.</p><a href="#contact">SEE OPTIONS →</a></article>
   </div>
